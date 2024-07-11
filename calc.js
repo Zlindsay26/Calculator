@@ -1,6 +1,8 @@
-let num1 = 0;
-let num2 = 0;
-let operator;
+let num1 = '';
+let num2 = '';
+let operator = '';
+let total = '';
+let displayValue;
 
 const button7 = document.getElementById('7');
 const button8 = document.getElementById('8');
@@ -22,22 +24,34 @@ const backspace = document.getElementById('backspace');
 const clearBtn = document.getElementById('clear');
 
 
-function add(a, b){
-return a + b;
+function add(num1, num2){
+return num1 + num2;
 }
 
-function subtract(a, b){
-return a - b;
+function subtract(num1, num2){
+return num1 - num2;
 }
 
-function multiply(a, b){
-return a * b;
+function multiply(num1, num2){
+return num1 * num2;
 }
 
-function divide(a, b){
-return a / b;
+function divide(num1, num2){
+return num1 / num2;
 }
 
-function operate(){
+function operate(num1, operator, num2){
+switch (operator) {
+    case '+':
+        return add(num1, num2);
+    case '-':
+        return subtract(num1, num2);
+    case '*': 
+        return multiply(num1, num2);
+    case '/':
+        return divide(num1, num2);
+    default:
+        return 'invalid operator';
 
 }
+};
