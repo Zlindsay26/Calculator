@@ -1,0 +1,32 @@
+body{
+    background-color: blueviolet;
+    text-align: center;
+}
+
+.row{
+
+}
+
+
+
+#display{
+
+    height: 60px;
+    width:  60px;
+}
+
+
+
+button{
+  font-size: 20px;
+  font-weight: bold;
+  font-variant-numeric: oldstyle-nums;
+  color: wheat;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  height: 80px;
+    width: 80px;
+}
+
