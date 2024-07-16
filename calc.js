@@ -65,9 +65,6 @@ switch (operator) {
 }
 };
 
-function getEquation(){
-
-};
 
 function updateDisplay(displayValue) {
     const display = document.getElementById('display');
@@ -148,13 +145,32 @@ button7.addEventListener('click', () => {
                                             }
                                         });
                                         equalBtn.addEventListener('click', () => {
-                                         operate(num1, operator, num2);
+                                            let equation = display.textContent;
+                                            let parts = equation.split(/([+\-*\/])/);
+                                        
+                                            if (parts.length === 3) {
+                                                num1 = parseFloat(parts[0]);
+                                                operator = parts[1];
+                                                num2 = parseFloat(parts[2]);
+                                             
+                                                let result = operate(num1, operator, num2);
+                                                 updateDisplay(result);
+                                                
+                                                num1 = result;
+                                                num2 = 0;
+                                                operator = '';
+                                                hasNumber = true; 
+                                            } else {
+                                                updateDisplay('Error');
+                                            }
                                         });
+                                        
+
                                         backspace.addEventListener('click', () => {
-                                            let currentDisplay = display.textContent;
-                                            if (currentDisplay.length > 0) {
-                                            currentDisplay = currentDisplay.slice(0, -1);
-                                             display.textContent = currentDisplay;
+                                            let goBack = display.textContent;
+                                            if (goBack.length > 0) {
+                                            goBack = goBack.slice(0, -1);
+                                             display.textContent = goBack;
                                             }
                                         });
                                         clearBtn.addEventListener('click', () => {
