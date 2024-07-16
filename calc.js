@@ -77,7 +77,7 @@ function updateDisplay(displayValue) {
 
 function appendToDisplay(value) {
     const display = document.getElementById('display');
-    var currentDisplayValue = display.textContent;
+    let currentDisplayValue = display.textContent;
     currentDisplayValue += value;
     updateDisplay(currentDisplayValue);
 }
@@ -151,8 +151,16 @@ button7.addEventListener('click', () => {
                                          operate(num1, operator, num2);
                                         });
                                         backspace.addEventListener('click', () => {
-
+                                            let currentDisplay = display.textContent;
+                                            if (currentDisplay.length > 0) {
+                                            currentDisplay = currentDisplay.slice(0, -1);
+                                             display.textContent = currentDisplay;
+                                            }
                                         });
                                         clearBtn.addEventListener('click', () => {
-
+                                            num1 = 0;
+                                            num2 = 0;
+                                            operator = '';
+                                            display.textContent = '';
+                                            hasNumber = false;
                                         });

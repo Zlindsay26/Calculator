@@ -13,7 +13,7 @@ background-color: gray;
 #display{
 font-size: 36px;
 text-align: end;
-border: solid lightgray;
+border: solid wheat;
 height: 123px;
 width: 474px;
 color: wheat;
@@ -51,4 +51,8 @@ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans 
 button:hover{
     background-color: gray;
     color: gray;
+}
+img{
+    height:50px;
+    width: 50px;
 }
