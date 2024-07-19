@@ -1,5 +1,10 @@
 body{
     background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
 }
 .calculator{
     width: 30rem;
@@ -51,4 +56,16 @@ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans 
 button:hover{
     background-color: gray;
     color: gray;
+}
+ 
+h1{
+    position:absolute;
+    top: 0;
+    color: rgba(102,247,113,1);
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+color: wheat;
 }
